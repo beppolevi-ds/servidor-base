@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "address=/${HOST}/${LOCAL_IP}"
+
+echo "server=${UPSTREAM_DNS_1}"
+echo "server=${UPSTREAM_DNS_2}"

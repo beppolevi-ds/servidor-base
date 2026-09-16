@@ -5,7 +5,9 @@ services:
     ports:
       - 32053:53/udp
       - 32053:53/tcp
+    env_file: .env
     volumes:
       - ./dnsmasq.d/:/etc/dnsmasq.d/ # directorios de modulos de configuracion
       - ./dnsmasq.conf:/etc/dnsmasq.conf # configuracion global
+      - ./generate-dnsmasq-conf:/etc/generate-dnsmasq-conf # script de configuracion
     restart: unless-stopped
